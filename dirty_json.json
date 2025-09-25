@@ -1,0 +1,93 @@
+[
+  {
+    "id": "001 ",
+    "name": " Alice ",
+    "age": "25",
+    "gender": "FEMALE",
+    "salary": "50000",
+    "joining_date": "2022-01-15",
+    "department": " HR ",
+    "status": "active",
+    "location": "new york",
+    "meta": {
+      "performance_score": "85",
+      "attendance": "95%"
+    }
+  },
+  {
+    "id": "002",
+    "name": "Bob",
+    "age": "NaN",
+    "gender": "male",
+    "salary": null,
+    "joining_date": "invalid_date",
+    "department": "hr",
+    "status": "ACTIVE",
+    "location": " New York ",
+    "meta": {
+      "performance_score": "null",
+      "attendance": "N/A"
+    }
+  },
+  {
+    "id": "003",
+    "name": "Charlie ",
+    "age": 30,
+    "gender": "Male",
+    "salary": "70000.0",
+    "joining_date": "2021-05-20",
+    "department": "IT",
+    "status": "inactive",
+    "location": "san francisco",
+    "meta": {
+      "performance_score": "92",
+      "attendance": "100%"
+    }
+  },
+  {
+    "id": "003",
+    "name": "Charlie ",
+    "age": 30,
+    "gender": "Male",
+    "salary": "70000.0",
+    "joining_date": "2021-05-20",
+    "department": "IT",
+    "status": "inactive",
+    "location": "san francisco",
+    "meta": {
+      "performance_score": "92",
+      "attendance": "100%"
+    }
+  },
+  {
+    "id": "004",
+    "name": "",
+    "age": "N/A",
+    "gender": "",
+    "salary": "NULL",
+    "joining_date": "",
+    "department": "IT",
+    "status": "INACTIVE",
+    "location": "",
+    "meta": {
+      "performance_score": "",
+      "attendance": ""
+    }
+  },
+  {
+    "id": "005",
+    "name": "Eve",
+    "age": "27",
+    "gender": "female",
+    "salary": "65000",
+    "joining_date": "2023-03-12",
+    "department": "Finance",
+    "status": "active",
+    "location": "Chicago",
+    "meta": {
+      "performance_score": "88",
+      "attendance": "96%"
+    },
+    "constant_column": "constant_value"
+  }
+]

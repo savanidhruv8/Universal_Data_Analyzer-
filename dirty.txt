@@ -1,0 +1,34 @@
+<html><body><h1>Welcome</h1></body></html>
+Hello,     world!      This is      a     test. 
+Hello,     world!      This is      a     test. 
+THIS    line   has   WEIRD    casing!!!
+
+ Non-breaking spaces everywhere. 
+This line has a Unicode snowman ☃ and emoji 😊
+
+<script>alert("This shouldn't be here!")</script>
+
+Messy$$$symbols@@@and###non-standard%%%characters!!!
+
+      Extra     spacing      and    tabs		
+
+这是中文文本，用于测试多语言处理。
+Voici un texte en français pour les tests.
+Este es un texto en español.
+
+Line with a soft hyphen­in the middle (note: not a normal hyphen)
+
+Here’s a line with a smart quote and an em dash — which might break some tools.
+
+乱码行:    This line has broken encoding
+
+<!-- HTML comment that should be removed -->
+
+<div class="content">Real content inside div</div>
+
+Some <b>bold</b> and <i>italic</i> formatting to remove.
+
+THIS LINE IS A DUPLICATE
+THIS LINE IS A DUPLICATE
+
+Final clean-ish line.
