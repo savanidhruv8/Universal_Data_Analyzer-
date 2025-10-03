@@ -1,6 +1,6 @@
 # Universal Data Analyzer
 
-A comprehensive data analysis platform that supports multiple data formats including CSV, JSON, Excel, Text, Audio, Image, and Video files. This application provides preprocessing, cleaning, and machine learning model recommendations for various data types.
+A comprehensive data analysis platform that supports multiple data formats including CSV, JSON, Excel, Text, Audio, and Image files. This application provides preprocessing, cleaning, and machine learning model recommendations for various data types.
 
 ## Table of Contents
 
@@ -15,12 +15,13 @@ A comprehensive data analysis platform that supports multiple data formats inclu
 
 ## Features
 
-- **Multi-format Support**: Process CSV, JSON, Excel, Text, Audio, Image, and Video files
+- **Multi-format Support**: Process CSV, JSON, Excel, Text, Audio, and Image files
 - **Data Cleaning**: Automated data cleaning and preprocessing pipelines
 - **Machine Learning Recommendations**: Smart ML model suggestions based on your data
-- **Streamlit Interface**: User-friendly web interface for easy interaction
+- **Streamlit Interface**: User-friendly web interface with consistent navigation
 - **Data Visualization**: Built-in data visualization capabilities
 - **Export Functionality**: Download processed data in various formats
+- **Easy Navigation**: Back button on all analyzer pages for seamless navigation
 
 ## Installation
 
@@ -38,21 +39,16 @@ A comprehensive data analysis platform that supports multiple data formats inclu
 3. Activate the virtual environment:
    - On Windows:
      ```bash
-     .\venv\Scripts\activate
+   .\venv\Scripts\activate
      ```
    - On macOS/Linux:
      ```bash
-     source venv/bin/activate
+   source venv/bin/activate
      ```
 
 4. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
-   ```
-
-5. For audio processing, install SpeechBrain:
-   ```bash
-   pip install speechbrain
    ```
 
 ## Usage
@@ -72,6 +68,8 @@ A comprehensive data analysis platform that supports multiple data formats inclu
 
 6. Process your data and download the results
 
+7. Use the "Back" button on any analyzer page to return to the main dashboard
+
 ## Supported Data Types
 
 ### CSV Analyzer
@@ -80,24 +78,28 @@ A comprehensive data analysis platform that supports multiple data formats inclu
 - Missing value imputation
 - Data type conversion
 - ML model recommendation for classification, regression, and clustering tasks
+- Back button for easy navigation
 
 ### JSON Analyzer
 - JSON data parsing and validation
 - Data structure analysis
 - Transformation to tabular format
 - ML model suggestions
+- Back button for easy navigation
 
 ### Excel Analyzer
 - Multi-sheet Excel processing
 - Data cleaning and formatting
 - Formula evaluation
 - Statistical analysis
+- Back button for easy navigation
 
 ### Text Analyzer
 - Text preprocessing and cleaning
 - Language detection
 - Natural language processing
 - Text classification model recommendations
+- Back button for easy navigation
 
 ### Audio Analyzer
 - Audio format conversion
@@ -105,18 +107,14 @@ A comprehensive data analysis platform that supports multiple data formats inclu
 - Voice activity detection (VAD)
 - Audio enhancement
 - ML model suggestions for audio tasks
+- Back button for easy navigation
 
 ### Image Analyzer
 - Image format conversion
 - Resize and normalization
 - Image preprocessing pipeline
 - ML model recommendations for computer vision tasks
-
-### Video Analyzer
-- Video processing and analysis
-- Frame extraction
-- Metadata analysis
-- ML model suggestions for video tasks
+- Back button for easy navigation
 
 ## Technologies Used
 
@@ -129,8 +127,9 @@ A comprehensive data analysis platform that supports multiple data formats inclu
 - **OpenCV**: Computer vision tasks
 - **Pillow**: Image processing
 - **Librosa**: Audio analysis
-- **SpeechBrain**: Audio processing and voice activity detection
+- **Pydub**: Audio processing
 - **NLTK**: Natural language processing
+- **SciPy**: Scientific computing
 
 ## Project Structure
 
@@ -138,15 +137,14 @@ A comprehensive data analysis platform that supports multiple data formats inclu
 universal-data-analyzer/
 ├── main.py                 # Main application entry point
 ├── requirements.txt        # Python dependencies
-├── preprocessing_pipeline.py # Core preprocessing functions
+├── unwanted_file.py 
 ├── pages/                  # Individual analyzer modules
 │   ├── audio_analyzer.py
 │   ├── csv_analyzer.py
 │   ├── excel_analyzer.py
 │   ├── image_analyzer.py
 │   ├── json_analyzer.py
-│   ├── txt_analyzer.py
-│   └── video_analyzer.py
+│   └── txt_analyzer.py
 ├── processed_images/       # Output directory for processed images
 └── venv/                   # Virtual environment (not included in repo)
 ```
@@ -165,4 +163,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Developed with ❤️ by [Your Name]
+Developed with ❤️ by [Savani Dhruv]

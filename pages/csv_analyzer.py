@@ -225,6 +225,41 @@ def detect_ml_subtype(df, algorithm_type, target_column=None):
     return "No subtype detected"
 
 # ---------- Streamlit App ----------
+# Add back button with improved styling
+col1, col2 = st.columns([1, 10])
+with col1:
+    st.markdown("""
+    <style>
+    div.stButton > button:first-child {
+        background-color: #f0f2f6;
+        color: #1a365d;
+        border: 1px solid #d1d5db;
+        border-radius: 0.375rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        transition: all 0.2s;
+        height: auto;
+        min-height: 38px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        min-width: 80px;
+        box-sizing: border-box;
+        white-space: nowrap;
+    }
+    div.stButton > button:first-child:hover {
+        background-color: #e5e7eb;
+        border-color: #9ca3af;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    if st.button("⬅️ Back", key="csv_back_button"):
+        st.switch_page("main.py")
+
 st.title("🧹 CSV Analyzer")
 
 # Initialize session state for dataset and CSV
@@ -237,14 +272,33 @@ if 'csv_data' not in st.session_state:
 uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"], key="file_uploader")
 
 if uploaded_file:
-    # Load CSV data
+    # Load CSV data with error handling for malformed files
     try:
+        # First, try to read with default parameters
         st.session_state.df = pd.read_csv(uploaded_file)
         csv_buffer = io.StringIO()
         st.session_state.df.to_csv(csv_buffer, index=False)
         csv_buffer.seek(0)
         st.session_state.csv_data = csv_buffer.getvalue()
-        st.write("✅ CSV file loaded.")
+        st.write("✅ CSV file loaded successfully.")
+    except pd.errors.ParserError as e:
+        # If there's a parsing error, try with error handling for malformed rows
+        try:
+            uploaded_file.seek(0)  # Reset file pointer
+            # Try newer pandas syntax first
+            try:
+                st.session_state.df = pd.read_csv(uploaded_file, on_bad_lines='skip')
+            except TypeError:
+                # Fall back to older pandas syntax
+                st.session_state.df = pd.read_csv(uploaded_file, error_bad_lines=False)
+            csv_buffer = io.StringIO()
+            st.session_state.df.to_csv(csv_buffer, index=False)
+            csv_buffer.seek(0)
+            st.session_state.csv_data = csv_buffer.getvalue()
+            st.warning("⚠️ CSV file loaded with some rows skipped due to formatting issues. Please check the data integrity.")
+        except Exception as e2:
+            st.error(f"Error loading file: {str(e)}")
+            st.stop()
     except Exception as e:
         st.error(f"Error loading file: {str(e)}")
         st.stop()

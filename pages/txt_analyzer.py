@@ -168,6 +168,41 @@ def process_text(text, clean_options, deduplicate, language_option, lang_choice,
     return cleaned_text
 
 # UI Components
+# Add back button with improved styling
+col1, col2 = st.columns([1, 10])
+with col1:
+    st.markdown("""
+    <style>
+    div.stButton > button:first-child {
+        background-color: #f0f2f6;
+        color: #1a365d;
+        border: 1px solid #d1d5db;
+        border-radius: 0.375rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        transition: all 0.2s;
+        height: auto;
+        min-height: 38px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        min-width: 80px;
+        box-sizing: border-box;
+        white-space: nowrap;
+    }
+    div.stButton > button:first-child:hover {
+        background-color: #e5e7eb;
+        border-color: #9ca3af;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    if st.button("⬅️ Back", key="txt_back_button"):
+        st.switch_page("main.py")
+
 st.title(":broom: Text Data Cleaning and Preprocessing")
 st.markdown("""
 Upload a .txt file to clean and preprocess your text data. 

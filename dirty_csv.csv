@@ -1,0 +1,11 @@
+id,name,age,email,salary
+1, Alice,29,alice@example.com,55000
+2,Bob,,bob@example,48000
+3, Charlie,thirty,charlie@example.com,52,000
+4,daniel,42,daniel@ex ample.com,61000
+5, Eve,  ,eve@example.com,not available
+6,Fred,38, fred@example.com,58000
+7,,31,george@example.com, 53000
+8,Hannah,27,,49000
+9,Ian,25,ian@example.com,47k
+10,Joan,30,joan@example.com,

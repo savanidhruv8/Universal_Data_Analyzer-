@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "name": "Alice",
+    "age": "25", 
+    "email": "alice@example.com",
+    "is_active": true
+  },
+  {
+    "id": "02",    
+    "name": "Bob ",
+    "age": 30,
+    "email": "bob@gmail.com",   
+    "is_active": "yes" 
+  },
+  {
+    "id": 3,
+    "name": null,
+    "age": "NaN",  
+    "email": "charlie@example",
+    "is_active": false,
+    "extra_field": "unexpected"
+  },
+  {
+    "id": 4,
+    "name": "Dana",
+    "age": "",    
+    "email": "",
+    "is_active": null
+  }
+]
