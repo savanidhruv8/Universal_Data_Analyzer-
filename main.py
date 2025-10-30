@@ -431,7 +431,7 @@ def main():
     <div class="footer">
         <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">© 2024 Universal Data Analyzer</p>
         <p style="font-size: 0.9rem; color: #a0aec0;">
-            Built with ❤️ using Streamlit | Version 2.1.0 | Last Updated: October 2025
+            Built with ❤️ using Streamlit | Version 2.0.0 | Last Updated: 2024
         </p>
     </div>
     """, unsafe_allow_html=True)

@@ -450,13 +450,6 @@ if st.session_state.df is not None:
                           st.session_state.csv_data,
                           file_name="cleaned_dataset.csv",
                           mime="text/csv")
-        
-        # Export cleaning summary as text file
-        summary_text = "\n".join([f"{k}: {v}" for k, v in summary.items() if not isinstance(v, (dict, list))])
-        st.download_button("📋 Download Cleaning Summary",
-                          summary_text,
-                          file_name="cleaning_summary.txt",
-                          mime="text/plain")
 
         # ML Algorithm Evaluation
         if algorithm_type != "None" and target_column and target_column in cleaned_df.columns:
